@@ -1,0 +1,71 @@
+/* styles.css */
+
+body {
+    font-family: Georgia, serif;
+    background-color: #dbd8a7;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ca7558;
+    text-align: center;
+    padding: 50px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+section {
+    padding: 15px;
+    margin: 50px;
+    background-color: #854326;
+    border-radius: 50px;
+    box-shadow: 0 2px 25px rgba(0, 0, 0, 1);
+    color: #fba004;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #a83104;
+    color: #fbe423;
+}
+
+img {
+    max-width: 49%;
+    height: auto;
+    border-radius: 10px;
+}
+
+video {
+    width: 49%;
+    display: block;
+    margin: 0px auto;
+    border-radius: 10px;
+}
+
+a:link, a:visited {
+  background-color: #b6a324;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: #dec362;
+}
+
+a[href*="scratch.mit.edu"] {
+  display: block;
+  width: fit-content;
+  margin: 10px auto;
+  border-radius: 50px;
+}
