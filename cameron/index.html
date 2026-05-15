@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Obstacle Escape | Game Web Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #0f172a, #1e293b);
+      color: #f8fafc;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 30px;
+      background: rgba(0, 0, 0, 0.25);
+    }
+
+    .logo {
+     max-width: 500px;
+     margin: 0 auto 20px;
+    }
+
+    .logo img {
+     width: 100%;
+     height: auto;
+     border-radius: 12px;
+     display: block;
+    }	
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+    }
+
+    header p {
+      max-width: 750px;
+      margin: 15px auto 0;
+      color: #cbd5e1;
+      font-size: 1.1rem;
+    }
+
+    nav {
+      background: #0f172a;
+      text-align: center;
+      padding: 15px 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav a {
+      color: #f8fafc;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.06);
+      margin-bottom: 25px;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #7dd3fc;
+      font-size: 1.8rem;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .feature-list li,
+    .info-list li {
+      margin-bottom: 10px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+	  height: 200px;
+	  object-fit: cover;
+	  border-radius: 10px;
+	}  
+
+    .gallery div {
+      text-align: center;
+    }
+
+    .gallery p {
+     font-size: 0.9rem;
+     color: #cbd5e1;
+     margin-top: 8px;
+    }
+
+    
+    .cta-box {
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .cta-button {
+      background: #38bdf8;
+      color: #0f172a;
+      border: none;
+      padding: 14px 28px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .cta-button:hover {
+      background: #7dd3fc;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 768px) {
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+
+      header h1 {
+        font-size: 2.1rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+	<img src="Obstacle_Escape.png" alt="Obstacle Escape Logo">
+	</div>
+    <p>
+      A fast-paced obstacle avoidance game where players must stay alert, move quickly,
+      and survive as long as possible. Built with simple mechanics, smooth movement,
+      and a challenging gameplay loop that keeps players coming back.
+    </p>
+  </header>
+
+  <nav>
+    <a href="#overview">Overview</a>
+    <a href="#features">Features</a>
+    <a href="#platform">Platform</a>
+    <a href="#screenshots">Screenshots</a>
+    <a href="#developer">Developer</a>
+  </nav>
+
+  <div class="container">
+
+    <section id="overview">
+      <h2>Game Overview</h2>
+      <p>
+        <strong>Obstacle Escape</strong> is a simple survival game based on my last project. 
+		In this game, the player moves around to avoid obstacles and stay alive as long as possible. 
+		The goal is to react quickly and not get hit.
+      </p>
+      <p>
+        This game builds on what I made before by improving the movement and making the obstacles more consistent. 
+		It uses simple controls and keeps the gameplay easy to understand, but still challenging so players want 
+		to keep trying and get better each time.
+      </p>
+    </section>
+
+    <section id="features">
+      <h2>Game Features</h2>
+      <div class="two-column">
+        <div>
+          <ul class="feature-list">
+            <li>Simple obstacle-avoidance gameplay</li>
+            <li>Easy-to-understand objective and controls</li>
+            <li>Player movement using directional controls</li>
+            <li>Collision detection that ends the game on contact</li>
+            <li>Obstacle reset system for continuous play</li>
+            <li>Short start delay to prepare the player before gameplay begins</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="feature-list">
+            <li>Fast-paced survival challenge</li>
+            <li>Replayable design that encourages improvement</li>
+            <li>Casual game structure that works well for mobile players</li>
+            <li>Clean gameplay loop based on repetition and timing</li>
+            <li>Beginner-friendly design and development approach</li>
+            <li>Built to show how simple mechanics can still create player engagement</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Game Pitch</h2>
+      <p>
+        This web page includes several ideas from my original mobile game pitch. The game concept
+        centers on the player-controlled character avoiding moving obstacles in a survival-based format.
+        The design keeps the gameplay simple so it is easier to build, test, and understand.
+      </p>
+      <ul class="info-list">
+        <li><strong>Game Concept:</strong> A simple mobile survival game focused on avoiding danger.</li>
+        <li><strong>Target Audience:</strong> Casual players who enjoy fast and easy-to-learn games.</li>
+        <li><strong>Development Tools:</strong> Created as a prototype using beginner-friendly game development methods.</li>
+        <li><strong>Assets Used:</strong> Basic player object, obstacle object, and simple visual elements for gameplay testing.</li>
+      </ul>
+    </section>
+
+    <section id="platform">
+      <h2>Platform Information</h2>
+      <p>
+        This project is currently presented as a prototype game concept for mobile-style play.
+        It is designed with the idea of being suitable for platforms such as:
+      </p>
+      <ul class="info-list">
+        <li>Google Play Store</li>
+        <li>Apple App Store</li>
+        <li>Browser-based demo page or student project showcase</li>
+      </ul>
+      <p>
+        At this point, the game is just a class project prototype and is not yet out or publicly released
+        in an app store.
+      </p>
+    </section>
+
+    <section id="screenshots">
+      <h2>Screenshots</h2>
+      
+
+      <div class="gallery">
+        <img src="Screenshot_1.png" alt="Gameplay Start Screen">
+        <img src="Screenshot_2.png" alt="Player Avoiding Obstacle">
+        <img src="Screenshot_3.png" alt="Game Over Screen">
+      </div>
+     
+    </section>
+
+    <section class="cta-box">
+      <h2>Play the Game</h2>
+      <p>
+        Ready to try <strong>Obstacle Escape</strong>? Click the button below to view the project
+        or download the game when available.
+      </p>
+      <button class="cta-button" onclick="showMessage()">Download / Play Now</button>
+      <p id="cta-message" style="margin-top:15px; color:#cbd5e1;"></p>
+    </section>
+
+    <section id="developer">
+      <h2>About the Developer</h2>
+      <p>
+        My name is Cameron Sanchez, and I created this game for my Project 3 Game Web Page assignment. 
+		The goal of this project was to make a simple but fun game. I used basic features like player 
+		movement, moving obstacles, and collision detection to build the game.
+      </p>
+      <p>
+        Through this project, I learned that even simple game ideas can still be 
+		challenging and fun. I saw how players can keep trying again and improve 
+		each time they play. I wanted to make a game that is easy to understand but 
+		still fun to play.
+      </p>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>© 2026 Obstacle Escape | Cameron Sanchez Project 3 Game Web Page</p>
+  </footer>
+
+  <script>
+    function showMessage() {
+      document.getElementById("cta-message").textContent =
+        "This is just a class project and is currently only a prototype. A public download link could be coming soon.";
+    }
+  </script>
+
+</body>
+</html>
