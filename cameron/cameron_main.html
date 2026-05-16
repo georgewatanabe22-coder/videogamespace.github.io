@@ -1,1 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Obstacle Escape | Cameron's Project</title>
+  <style>
+    * { box-sizing: border-box; }
 
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #0f172a, #1e293b);
+      color: #f8fafc;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 45px 20px 30px;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+
+    .logo img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+    }
+
+    nav {
+      background: #020617;
+      text-align: center;
+      padding: 15px 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #f8fafc;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+
+    nav a:hover { color: #38bdf8; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.06);
+      margin-bottom: 25px;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #7dd3fc;
+      font-size: 1.8rem;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    li { margin-bottom: 10px; }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .cta-box { text-align: center; }
+
+    .cta-button {
+      background: #38bdf8;
+      color: #0f172a;
+      border: none;
+      padding: 14px 28px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.2s ease;
+      display: inline-block;
+      text-decoration: none;
+      margin: 8px;
+    }
+
+    .cta-button:hover {
+      background: #7dd3fc;
+      transform: translateY(-2px);
+    }
+
+    iframe, video {
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 12px;
+      border: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 768px) {
+      .two-column { grid-template-columns: 1fr; }
+      iframe, video { height: 260px; }
+      nav a {
+        display: inline-block;
+        margin: 6px 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <img src="Obstacle_Escape.png" alt="Obstacle Escape Logo">
+  </div>
+  <p>
+    A fast-paced obstacle avoidance game where the player controls a drone, dodges hazards,
+    and tries to survive as long as possible.
+  </p>
+</header>
+
+<nav>
+  <a href="../main_page/index.html">Home</a>
+  <a href="../main_page/pitch.html">Pitch Document</a>
+  <a href="#overview">Overview</a>
+  <a href="#screenshots">Screenshots</a>
+  <a href="#trailer">Trailer</a>
+  <a href="#developer">Developer</a>
+</nav>
+
+<div class="container">
+
+  <section id="overview">
+    <h2>Game Overview</h2>
+    <p>
+      <strong>Obstacle Escape</strong> is a mobile-style survival game where the player controls
+      a drone and avoids obstacles for as long as possible. The game focuses on quick reactions,
+      smooth movement, and a simple gameplay loop that is easy to understand.
+    </p>
+    <p>
+      The goal is to stay alive, avoid collisions, and improve your survival time with each attempt.
+      The project demonstrates movement, obstacle timing, collision detection, player feedback, and
+      basic game polish.
+    </p>
+  </section>
+
+  <section id="features">
+    <h2>Game Features</h2>
+    <div class="two-column">
+      <ul>
+        <li>Drone-based player movement</li>
+        <li>Obstacle avoidance gameplay</li>
+        <li>Fast-paced survival challenge</li>
+        <li>Collision detection</li>
+        <li>Game over/restart system</li>
+      </ul>
+      <ul>
+        <li>Mobile-style design concept</li>
+        <li>Simple controls</li>
+        <li>Replayable score/survival loop</li>
+        <li>Visual polish and themed graphics</li>
+        <li>Built as a student game prototype</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="platform">
+    <h2>Platform and Game Link</h2>
+    <p>
+      This game is currently presented as a class project prototype. It was designed with the idea
+      of mobile-style play, but it is currently being showcased through a web-based project page.
+    </p>
+    <p>
+      A future version could be published as a mobile game or browser-based game.
+    </p>
+    <div class="cta-box">
+      <a class="cta-button" href="#" onclick="showMessage()">Play / Download Game</a>
+      <p id="cta-message"></p>
+    </div>
+  </section>
+
+  <section id="screenshots">
+    <h2>Screenshots</h2>
+    <div class="gallery">
+      <img src="Screenshot_1.png" alt="Obstacle Escape screenshot 1">
+      <img src="Screenshot_2.png" alt="Obstacle Escape screenshot 2">
+      <img src="Screenshot_3.png" alt="Obstacle Escape screenshot 3">
+      <img src="Screenshot_4.png" alt="Obstacle Escape screenshot 4">
+    </div>
+  </section>
+
+  <section id="trailer">
+    <h2>Game Trailer / Gameplay Video</h2>
+    <p>
+      This section is for the short gameplay trailer required for the final project.
+      Replace the video source below with the final gameplay trailer file or YouTube embed.
+    </p>
+
+    <!-- Replace this with your actual video file if uploaded -->
+    <video controls>
+      <source src="obstacle_escape_trailer.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section id="pitch">
+    <h2>Pitch Summary</h2>
+    <p>
+      <strong>Game Concept:</strong> A simple obstacle avoidance survival game where the player pilots
+      a drone through hazards and tries to survive as long as possible.
+    </p>
+    <p>
+      <strong>Target Audience:</strong> Casual players who enjoy quick, simple, replayable games.
+    </p>
+    <p>
+      <strong>Monetization Strategy:</strong> A future version could use optional ads, cosmetic upgrades,
+      or a free browser version with expanded paid content.
+    </p>
+    <p>
+      <strong>Marketing Strategy:</strong> The game could be promoted through a portfolio site, classroom
+      showcase, social media clips, and game-hosting platforms.
+    </p>
+  </section>
+
+  <section id="developer">
+    <h2>Developer Role</h2>
+    <p>
+      Cameron Sanchez contributed as the Game Artist / Visual Designer for Team 1. This included creating
+      and organizing visual assets, helping define the shared website style, preparing screenshots, and
+      building the presentation page for <strong>Obstacle Escape</strong>.
+    </p>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2026 Obstacle Escape | Cameron Sanchez | CISGAME 420</p>
+</footer>
+
+<script>
+  function showMessage() {
+    document.getElementById("cta-message").textContent =
+      "This prototype is currently being presented as part of the CISGAME 420 final project.";
+  }
+</script>
+
+</body>
+</html>
