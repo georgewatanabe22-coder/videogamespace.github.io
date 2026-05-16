@@ -59,6 +59,25 @@ nav a {
     transition: 0.3s;
 }
 
+#music-btn {
+    margin-top: 25px;
+    padding: 10px 22px;
+    font-size: 1em;
+    font-weight: bold;
+    background: linear-gradient(90deg, #7b2cff, #00d9ff);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0,217,255,0.5);
+    transition: 0.3s;
+}
+
+#music-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0,217,255,0.8);
+}
+        
 nav a:hover {
     color: #00d9ff;
     text-shadow: 0 0 10px #00d9ff;
@@ -76,7 +95,7 @@ nav a:hover {
         <a href="../cameron/index.html">Cameron's Project</a> &nbsp; 
         <a href="../"></a> &nbsp;
     </nav>
-    <audio id="bg-audio" autoplay loop>
+    <audio id="bg-audio" loop>
         <source src="casual-play-audio.mp3" type="audio/mpeg">
     </audio>
     
@@ -87,10 +106,15 @@ const audio = document.getElementById('bg-audio');
 const musicButton = document.getElementById('music-btn');
 
 musicButton.addEventListener('click', () => {
-     audio.play();
-     musicButton.textContent = '♫ Music Playing';
- });
- </script>
+    if (audio.paused) {
+        audio.play();
+        musicButton.textContent = '♫ Pause Music';
+    } else {
+        audio.pause();
+        musicButton.textContent = '▶ Play Background Music';
+    }
+});
+</script>
 
     
     <!--
