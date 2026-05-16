@@ -31,11 +31,25 @@
 </head>
 <body>
     <nav>
-        <a href="">Sean's Project</a> &nbsp; 
-        <a href="">George's Project</a> &nbsp;
-        <a href=""></a> &nbsp; 
-        <a href=""></a> &nbsp;
+        <a href="../sean's folder/sv_cisgame_sean_page.html">Sean's Project</a> &nbsp; 
+        <a href="../george's folder/index.html">George's Project</a> &nbsp;
+        <a href="../cameron/index.html"></a> &nbsp; 
+        <a href="../"></a> &nbsp;
     </nav>
+    <audio id="bg-audio" loop>
+        <source src="casual play audio.mp3.mp3" type="audio/mpeg">
+    </audio>
+    <button id="start-btn">Enter Site & Play Music</button>
+    <script>
+    const audio = document.getElementById('bg-audio');
+    const button = document.getElementById('start-btn');
+
+    button.addEventListener('click', () => {
+        audio.play();
+        // Optional: Hide the button or fade out a splash screen after clicking
+    button.style.display = 'none'; 
+    });
+    </script>
     <h1>Space Invaders</h1>
     <canvas id="game"></canvas>
     <script type="module" src="index.js"></script>
